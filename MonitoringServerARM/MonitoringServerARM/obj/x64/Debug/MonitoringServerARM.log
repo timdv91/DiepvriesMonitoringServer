@@ -1,0 +1,2 @@
+﻿  Validating architecture
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Application Type\Linux\1.0\Linux.Common.targets(51,5): error : Current project architecture 'x64' is incompatible with the remote system architecture 'ARM' ('ARM'). Please switch the project architecture to 'ARM' in Configuration Manager.

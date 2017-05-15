@@ -1,0 +1,1 @@
+g++ -o "/root/projects/MonitoringServerARM/bin/ARM/Debug/MonitoringServerARM.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/MonitoringServerARM/obj/ARM/Debug/main.o

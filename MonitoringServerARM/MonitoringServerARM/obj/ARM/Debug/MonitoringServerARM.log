@@ -1,0 +1,23 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '192.168.1.17'
+  Starting remote build
+  Compiling sources:
+  main.cpp
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\tcpClient.h(4): warning : ignoring #pragma comment  [-Wunknown-pragmas]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\udpDiscover.h(4): warning : ignoring #pragma comment  [-Wunknown-pragmas]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(34,55): warning : passing NULL to non-pointer argument 1 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(34,55): warning : passing NULL to non-pointer argument 2 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(86,59): warning : passing NULL to non-pointer argument 1 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(86,59): warning : passing NULL to non-pointer argument 2 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(120,58): warning : passing NULL to non-pointer argument 1 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(120,58): warning : passing NULL to non-pointer argument 2 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(147,21): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(150,22): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(182,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(231,1): warning : no return statement in function returning non-void [-Wreturn-type]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(243,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(292,56): warning : passing NULL to non-pointer argument 1 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\main.cpp(292,56): warning : passing NULL to non-pointer argument 2 of ‘void sendmail::setRecentFreezerData(int, int, bool, std::string)’ [-Wconversion-null]
+  Linking objects
+  MonitoringServerARM.vcxproj -> C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerARM\MonitoringServerARM\bin\ARM\Debug\MonitoringServerARM.out

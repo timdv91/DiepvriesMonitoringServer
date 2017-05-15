@@ -1,0 +1,5 @@
+﻿  udpDiscover.cpp
+c:\users\tim\documents\visual studio 2015\projects\monitoringserverwin\monitoringserverwin\udpdiscover.cpp(32): warning C4101: 'acceptSocket': unreferenced local variable
+c:\users\tim\documents\visual studio 2015\projects\monitoringserverwin\monitoringserverwin\udpdiscover.cpp(27): warning C4101: 'sendMessage': unreferenced local variable
+  MonitoringServerWin.vcxproj -> C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerWin\Debug\MonitoringServerWin.exe
+  MonitoringServerWin.vcxproj -> C:\Users\Tim\Documents\Visual Studio 2015\Projects\MonitoringServerWin\Debug\MonitoringServerWin.pdb (Full PDB)
