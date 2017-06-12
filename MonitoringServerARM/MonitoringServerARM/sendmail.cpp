@@ -54,7 +54,7 @@ void sendmail::checkFreezerHealth(string freezerName, int ID)
 	//if rstate = false, then there is a connection problem!
 	if (ID < 0)
 	{
-		sendMail("FreezerMonitoring System information", _rError, ID); //send standard mail wit variating text.
+		sendMail("FreezerMonitoring System information", _rError, ID); //send standard mail with variating text.
 	}
 	else if (_rState != true)
 	{
@@ -75,23 +75,40 @@ void sendmail::checkFreezerHealth(string freezerName, int ID)
 	}
 	else //if temperature is out of range:
 	{
-		if (_rTemp < _lowUpTemps[ID][0]) //when to cold:
+		if (_rTemp < -1000) //On thermocouple malfunction / error.
 		{
 			stringstream ss;
-			ss << "Monitoring system detected a freezer to cold: " << freezerName << endl;
-			ss << "This freezer is to cold!" << endl;
+			ss << "Monitoring system Thermocouple malfunction detected: " << freezerName << endl;
+			ss << endl << "Thermocoule sensor malfunction error: " << _rTemp << endl;
+			
+			ss << "Problemsolving steps: " << endl;
+			if(_rTemp == -1001)
+				ss << "Possible bad connection on thermocouple wires. Check these connections." << endl;
+			if(_rTemp == -1002)
+				ss << "Possible bad connection to GND on thermocouple wires." << endl;
+			if(_rTemp == -1003)
+				ss << "Possible bad connection to VCC (+3.3Volt) on thermocouple wires. " << endl;
+
+			ss << "As this error is not freezer related this is not urgent.";
+			sendMail("Freezer: Possible Thermocouple sensor malfunction!", ss.str(), ID);
+		}
+		else if (_rTemp < _lowUpTemps[ID][0]) //when to cold:
+		{
+			stringstream ss;
+			ss << "Monitoring system detected a freezer that is to cold: " << freezerName << endl;
+			ss << endl << "This freezer is to cold!" << endl;
 			ss << "At this moment, the temperature inside this freezer is: " << _rTemp << "°C" << endl;
 			ss << "The minimum allowed preset temperature is: " << _lowUpTemps[ID][0] << "°C";
-			sendMail("Freezer: to cold!", ss.str(), ID);
+			sendMail("Freezer: Low temperature warning!", ss.str(), ID);
 		}
 		else if (_rTemp > _lowUpTemps[ID][1]) //when to hot:
 		{
 			stringstream ss;
-			ss << "Monitoring system detected a freezer to hot: " << freezerName << endl;
-			ss << "This freezer is to hot!" << endl;
+			ss << "Monitoring system detected a freezer with high temperature: " << freezerName << endl;
+			ss << endl << "This freezer has high temperature!" << endl;
 			ss << "At this moment, the temperature inside this freezer is: " << _rTemp << "°C" << endl;
 			ss << "The maximum allowed preset temperature is: " << _lowUpTemps[ID][1] << "°C";
-			sendMail("Freezer: to hot!", ss.str(), ID);
+			sendMail("Freezer: High temperature warning!", ss.str(), ID);
 		}
 	}
 
